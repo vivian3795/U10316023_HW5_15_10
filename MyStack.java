@@ -3,7 +3,7 @@
  * Ex: 15.10 
  * Information:
  *		MyStack class was on page 462. 
- *	  Rewrite MyStack to perform a deep copy.
+ *	    Rewrite MyStack to perform a deep copy.
  */
 
 import java.util.ArrayList;
@@ -26,18 +26,18 @@ class MyStack implements Cloneable {
   }
 
 	public Object pop() {
-		Object o = get(getSize() - 1);
-		remove(getSize() - 1);
+		Object o = list.get(getSize() - 1);
+		list.remove(getSize() - 1);
 		return o;
 	}
 
 	public Object push(Object o) {
-		add(o);
+		list.add(o);
 		return o;
 	}
 
 	public int search(Object o) {
-		return indexOf(o);
+		return list.indexOf(o);
 	}
 
 	@Override
@@ -45,8 +45,6 @@ class MyStack implements Cloneable {
 		return "stack: " + list.toString();
 	}
 
-	//override the Clone() method in the Object class
-	@Override
 	//this exception is thrown if MyStack does not implement Cloneable
 	public Object Clone() throws CloneNotSupportedException{
 		//perform a shallow copy
