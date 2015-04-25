@@ -43,7 +43,7 @@ class MyStack implements Cloneable {
 	//supperess warning
 	@SuppressWarnings(value={"unchecked", "deprecation"})
 	//this exception is thrown if MyStack does not implement Cloneable
-	public Object Clone() throws CloneNotSupportedException{
+	public Object clone() throws CloneNotSupportedException{
 		//perform a shallow copy
 		MyStack mystack_clone = (MyStack)super.clone();
 		//deep copy on list
