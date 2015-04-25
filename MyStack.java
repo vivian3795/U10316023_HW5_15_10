@@ -31,7 +31,7 @@ class MyStack implements Cloneable {
 		return o;
 	}
 
-	public Object push(Object o) {
+	public void push(Object o) {
 		list.add(o);
 	}
 
@@ -39,7 +39,9 @@ class MyStack implements Cloneable {
 	public String toString() {
 		return "stack: " + list.toString();
 	}
-
+	
+	//supperess warning
+	@SuppressWarnings(value={"unchecked", "deprecation"})
 	//this exception is thrown if MyStack does not implement Cloneable
 	public Object Clone() throws CloneNotSupportedException{
 		//perform a shallow copy
@@ -48,5 +50,5 @@ class MyStack implements Cloneable {
 		mystack_clone.list = (ArrayList<Object>)this.list.clone();
 		return mystack_clone;
 	}
-	
+
 }
