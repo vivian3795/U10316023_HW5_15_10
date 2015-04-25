@@ -16,7 +16,7 @@
 		sample.peek();
 
 		//clone it
-		MyStack clone = (MyStack)(sample.clone());
+		MyStack clone = (MyStack)((MyStack)sample).clone();
 		clone.push("A");
 		clone.push("B");
 		clone.push("C");
